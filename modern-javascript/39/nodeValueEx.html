@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="foo">hello</div>
+</body>
+<script>
+    // 문서 노드의 nodeValue 프로퍼티를 참조한다.
+    console.log(document.nodeValue); // null
+
+    // 요소 노드의 nodeValue 프로퍼티를 참조한다.
+    const $foo = document.getElementById('foo');
+    console.log($foo.nodeValue); // null
+
+    // 텍스트 노드의 nodeValue 프로퍼티를 참조한다.
+    const {textNode} = $foo;
+    console.log($foo.firstChild.nodeValue); // hello
+
+    const $textNode = $foo.firstChild;
+    console.log($textNode.nodeValue); // hello
+
+
+    // 1. #foo 요소 노드의 자식 노드인 텍스트 노드를 취득한다.
+    const $textNode2 = document.getElementById('foo').firstChild;
+
+    // 2. nodeValue 프로퍼티를 사용하여 텍스트 노드의 값을 변경한다.
+    $textNode2.nodeValue = 'world';
+    console.log($textNode2.nodeValue); // world
+</script>
+</html>

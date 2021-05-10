@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        // input 요소 노드 객체를 선택
+        const $input = document.querySelector('input');
+
+        // input 요소 노드 객체의 프로토타입 체인
+        console.log(
+            Object.getPrototypeOf($input) === HTMLInputElement.prototype, // true
+            Object.getPrototypeOf(HTMLInputElement.prototype) === HTMLElement.prototype, // true
+            Object.getPrototypeOf(HTMLElement.prototype) === Element.prototype, // true
+            Object.getPrototypeOf(Element.prototype) === Node.prototype, // true
+            Object.getPrototypeOf(Node.prototype) === EventTarget.prototype, // true
+            Object.getPrototypeOf(EventTarget.prototype) === Object.prototype // true
+        );
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 요소 노드의 콘텐츠 영역에 다른 요소 노드가 없고 텍스트만 존재 -->
+    <div id="foo">Hello</div>
+</body>
+<script>
+    const $foo = document.getElementById('foo');
+
+    // 요소 노도의 콘텐츠 영역에서 자식 요소 노드가 없고 텍스트만 존재한다면
+    // firstChild.nodeValue와 textContent는 같은 결과를 반환한다.
+    console.log($foo.textContent); // Hello 
+    console.log($foo.firstChild.nodeValue === $foo.textContent); // true
+</script>
+</html>

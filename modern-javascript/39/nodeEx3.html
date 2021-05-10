@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits"></ul>
+</body>
+<script>
+    // 이 방법을 쓰면 DOM이 한 번만 변경되므로 성능에는 좋치만 불필요한 컨테이너 요소(div)가 DOM에 추가되는 부작용이 있다.
+    // nodeEx4.html 참고하기
+    const $fruits = document.getElementById('fruits');
+
+    // 컨테이너 요소 노드 생성
+    const $container = document.createElement('div');
+
+    ['Apple', 'Banana', 'Orange'].forEach(text => {
+        // 1. 요소 노드 생성
+        const $li = document.createElement('li');
+
+        // 2. 텍스트 노드 생성
+        const textNode = document.createTextNode(text);
+
+        // 3. 텍스트 노드를 $li 요소 노드의 자식 노드로 추가
+        $li.appendChild(textNode);
+
+        // 4. $li 요소 노드를 #fruits 요소 노드의 마지막 자식 노드로 추가
+        $fruits.append($li);
+    });
+
+    // 5. 컨테이너 요소 노드를 #fruits 요소 노드의 마지막 자식 노드로 추가
+    $fruits.appendChild($container);
+</script>
+</html>

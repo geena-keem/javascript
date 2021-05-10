@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red { color: red; }
+        .blue { color: blue; }
+    </style>
+</head>
+<body>
+    <ul id="fruits">
+        <li class="red">Apple</li>
+        <li class="red">Banana</li>
+        <li class="red">Orange</li>
+    </ul>
+    <script>
+        // class 값이 'red' 인 요소 노드를 모두 탐색하여 HTMLcollection 개게에 담아 반환한다.
+        const $elems = document.getElementsByClassName('red');
+        // 이 시점에 HTMLcollection 객체에는 3개의 요소 노드가 담겨 있다.
+        console.log($elems); // HTMLCollection(3) [li.red, li.red, li.red]
+
+        // // HTMLcollection 객체의 모든 요소의 class 값을 'blue'로 변경한다.
+        // for (let i = 0; i < $elems.length; i++) {
+        //     $elems[i].className = 'blue';
+        // }
+        // // HTMLcollection 객체의 요소가 3개에서 1개로 변경되었다.
+        // console.log($elems); // HTMLCollection [li.red]
+
+        // // for문을 역방향으로 순회
+        // for (let i = $elems.length-1; i >= 0; i--) {
+        //     $elems[i].className = 'blue';
+        // }
+
+        [...$elems].forEach(elem => elem.className = 'blue');
+    </script>
+</body>
+</html>

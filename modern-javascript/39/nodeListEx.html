@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+</body>
+<script>
+    const $fruits = document.getElementById('fruits');
+
+    // childNodes 프로퍼티는 NodeList 객체(Live)를 반환한다.
+    const { childNodes } = $fruits;
+    console.log(childNodes instanceof NodeList); // true
+
+    // $fruits 요소의 자식 노드는 공백 텍스트 노드를 포함해 모두 5개이다.
+    console.log(childNodes); // NodeList(5) [text, li, text, li, text]
+
+    // for (let i = 0; i < childNodes.length; i++) {
+    //     // removeChild 메서드는 $fruits 요소의 자식 노드를 DOM에서 삭제한다.
+    //     // removeChild 메서드가 호출될 때마다 NodeList 객체인 childNodes가 실시간으로 변경된다.
+    //     $fruits.removeChild(childNodes[i]);
+    // }
+
+    // // 예상과 다르게 $fruits 요소의 모든 자식 노드가 삭제되지 않았다.
+    // console.log(childNodes); // NodeList(2) [li, li]
+
+    
+    // 스프레드 문법을 사용하여 NodeList 객체를 배열로 반환한다.
+    [...childNodes].forEach(childNode => {
+        $fruits.removeChild(childNode);
+    });
+
+    // $fruits 요소의 자식 노드가 모두 삭제되었다.
+    console.log(childNodes); // NodeList []
+</script>
+</html>

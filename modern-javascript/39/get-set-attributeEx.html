@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="user" type="text" value="gee-na">
+</body>
+<script>
+    const $input = document.getElementById('user');
+
+    // value 어트리뷰트 값을 취득
+    const inputValue = $input.getAttribute('value');
+    console.log(inputValue); // gee-na
+
+    // value 어트리 뷰트 값을 변경
+    $input.setAttribute('value', 'Keem');
+    console.log($input.getAttribute('value')); // Keem
+</script>
+</html>

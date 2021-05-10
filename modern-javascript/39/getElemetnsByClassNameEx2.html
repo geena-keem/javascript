@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li class="apple">Apple</li>
+        <li class="banana">Banana</li>
+        <li class="orange">Orange</li>
+    </ul>
+    <div class="banana">Banana</div>
+    <script>
+        // DOM 전체에서 class값이 'banana'인 요소 노드를 모두 탐색하여 반환한다.
+        const $bananasFromDocument = document.getElementsByClassName('banana');
+        console.log($bananasFromDocument); // HTMLCollection(2) [li.fruit.banana, div.banana]
+
+        // #fruits 요소의 자손 노드 중에서 class 값이 'banana'인 요소 노드를 모두 탐색하여 반환한다.
+        const $fruits = document.getElementById('fruits');
+        const $bananaFromFruits = $fruits.getElementsByClassName('banana');
+
+        console.log($bananaFromFruits); // HTMLCollection [li.banana]
+    </script>
+</body>
+</html>

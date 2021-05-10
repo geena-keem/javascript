@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="user" type="text" value="gee-na">
+</body>
+<script>
+    const $input = document.getElementById('user');
+
+    // value 어트리뷰트 존재 확인
+    if ($input.hasAttribute('value')) {
+        // value 어트리뷰트 삭제
+        $input.removeAttribute('value');
+    }
+
+    // value 어트리뷰트가 삭제되었다.
+    console.log($input.hasAttribute('value')); // false
+</script>
+</html>
