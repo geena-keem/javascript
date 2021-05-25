@@ -1,7 +1,5 @@
 # script태그의 async / defer
 
----
-
 DOM 생성이 blocking되는 문제를 근본적으로 해결하기 위해 HTML5부터 script 태그에 async와 defer가 추가되었다.
 
 다음과 같이 src 어트리뷰트를 통해 외부 자바스크립트 파일을 로드하는 경우에만 사용할 수 있으며 src 어트리뷰트가 없는 인라인 자바스트립트에는 사용할 수 없다.
