@@ -3,7 +3,7 @@
 // use this for vanila Javascript.
 'use strict';
 
-// 2. Variable 변수
+// 2. Variable 변수, rw(read/write) 메모리의 값을 읽고 쓰는 것이 가능하다
 //    let (added in ES6)
 console.log(age);
 let globalName = 'global name';
@@ -27,11 +27,9 @@ console.log(globalName);
 }
 console.log(age);
 
-// 3. Constants 상수
-// favor immutable data type always for a few reasons:
-// - security 보안
-// - thread safety 스레드 안전성
-// - reduce human mistakes 실수 감소
+// 3. Constant 상수, r(read only) 읽기만 가능하다
+// use const whenever possible. 가능한 const를 사용!
+// only use let if variable nedds to change. 변수를 변경해야하는 경우에만 let을 사용!
 
 // 값이 계속 변경될 수 있는 것을 mutable data type이라고 하며
 // 바이러스도 mutation을 통해서 계속 유전자 서열을 바꿔나간다.
@@ -39,6 +37,18 @@ console.log(age);
 // constants는 변경이 불가능하기 때문에 immutable data type이라 불린다.
 const daysInWeek = 7;
 const maxNumber = 5;
+
+// Note!
+// Immutable data types: primitive types(기본 타입), frozen objects(고정된 객체) (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable in JS (기본적으로 모든 객체는 JS에서 변경이 가능하다)
+// 메모리에 저장되는 타입은 크게 2가지 이며 primitive type과 object타입이 있다.
+// primitive type은 값 자체가 메모리에 저장된다.
+// object type은 크기가 너무 커서 메모리에 한번에 올라갈 수 없으며 reference를 통해 메모리에 저장한다.
+
+// favor immutable data type always for a few reasons:
+// - security 보안
+// - thread safety 스레드 안전성
+// - reduce human mistakes 실수 감소
 
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, undefined, symbol
