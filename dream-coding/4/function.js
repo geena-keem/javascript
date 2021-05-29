@@ -201,7 +201,7 @@ function calculate(command, a, b) {
     case 'remainder':
       return a % b;
     default:
-      break;
+      throw Error('unknown command');
   }
 }
 console.log(calculate('add', 1, 2));
