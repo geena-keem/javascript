@@ -116,14 +116,14 @@ for (key in user) {
 console.clear();
 console.log(user3);
 
-// Object.assign
+// Object.assign(1)
 // - 복사하고자 하는 target과 복사를 하려고 하는 source를 같이 전달하고
 //   return값은 target과 source가 통합된 값을 return해준다.
 const user4 = {};
 Object.assign(user4, user);
 console.log(user4);
 
-// 2번째 방법
+// Object.assign(2)
 const user5 = Object.assign({}, user);
 console.log(user5);
 
