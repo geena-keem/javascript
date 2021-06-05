@@ -1,5 +1,5 @@
 // Q1. make a string out of an array
-// join
+// join:
 {
   const fruits = ['apple', 'banana', 'orange'];
   const result = fruits.join(', ');
@@ -7,7 +7,7 @@
 }
 
 // Q2. make an array out of a string
-// split
+// split:
 {
   const fruits = '🍎, 🥝, 🍌, 🍒';
   const result = fruits.split(', ');
@@ -15,7 +15,7 @@
 }
 
 // Q3. make this array look like this: [5, 4, 3, 2, 1]
-// reverse
+// reverse:
 {
   const array = [1, 2, 3, 4, 5];
   const result = array.reverse();
@@ -24,7 +24,7 @@
 }
 
 // Q4. make new array without the first two elements
-// slice
+// slice:
 {
   const array = [1, 2, 3, 4, 5];
   const result = array.slice(2, 5);
@@ -49,14 +49,14 @@ const students = [
 ];
 
 // Q5. find a student with the score 90
-// find
+// find:
 {
   const result = students.find((students) => students.score === 90);
   console.log(result);
 }
 
 // Q6. make an array of enrolled students
-// filter
+// filter:
 {
   const result = students.filter((student) => student.enrolled);
   console.log(result);
@@ -64,15 +64,15 @@ const students = [
 
 // Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
-// map
+// map:
 {
   const result = students.map((student) => student.score);
   console.log(result);
 }
 
 // Q8. check if there is a student with the score lower than 50
-// some
-// every
+// some:
+// every:
 {
   const result = students.some((student) => student.score < 50);
   console.log(result);
@@ -82,7 +82,7 @@ const students = [
 }
 
 // Q9. compute students' average score
-// reduce
+// reduce:
 {
   const result = students.reduce((prev, curr) => prev.score + curr.score);
   console.log(result / students.length);
@@ -100,7 +100,7 @@ const students = [
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
-// sort
+// sort:
 {
   const result = students
     .map((student) => student.score)
