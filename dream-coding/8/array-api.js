@@ -1,5 +1,9 @@
 // Q1. make a string out of an array
-// join:
+// join: join(separator?: string): string;
+/**
+ * Reverses the elements in an array in place.
+ * This method mutates the array and returns a reference to the same array.
+ */
 {
   const fruits = ['apple', 'banana', 'orange'];
   const result = fruits.join(', ');
