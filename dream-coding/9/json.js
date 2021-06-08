@@ -68,3 +68,15 @@ console.log(rabbit.birthDate.getDate());
 // json으로 만든 데이터 자체에 있는 string이 object에 할당되어 에러가 난다.
 
 console.log(obj.birthDate.getDate()); // parse()에서 콜백함수 처리 후
+
+// http://jsondiff.com/
+// => 서버에게 요청했을 때 첫 번째로 받아 온 데이터와 두 번째로 받아 온 데이터가 어떤게 다른지 비교할 수 있는 사이트 (디버깅할 때 유용!)
+
+// https://jsonbeautifier.org/
+// => JSON Formatter
+
+// https://jsonparser.org/
+// => JSON Parser
+
+// https://tools.learningcontainer.com/json-validator/
+// => JSON 오류 및 유용성 check!
