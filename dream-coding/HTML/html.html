@@ -1,0 +1,65 @@
+<!-- 부모, 자식, 형재 노드: > -->
+<!-- div>ul>li -->
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+<!-- 형제 노드를 만들 때: + -->
+<!-- div>ul+ol -->
+<div>
+    <ul></ul>
+    <ol></ol>
+</div>
+
+<!-- 반복해서 만들 때: * -->
+<!-- ul>li*5 -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!-- 부모노드에 추가하고 싶을 때: ^ -->
+<!-- div>ul>li^ol => li의 부모노드 ul옆에 ol을 추가 -->
+<div>
+    <ul>
+        <li></li>
+    </ul>
+    <ol></ol>
+</div>
+
+<!-- 그룹화: () -->
+<!-- div>(header>ul>li*2>a)+footer>p -->
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</div>
+
+<!-- Tag안에 text를 작성할 때: {} -->
+<!-- p{hello} -->
+<p>hello</p>
+
+<!-- 자동으로 숫자를 할당: {$} -->
+<!-- p.class${item $}*5 -->
+<p class="class1">item 1</p>
+<p class="class2">item 2</p>
+<p class="class3">item 3</p>
+<p class="class4">item 4</p>
+<p class="class5">item 5</p>
+
+<!-- 더미용 text 생성 -->
+<!-- p>lorem -->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis aliquam porro tempore, quas eum accusamus quod perferendis quisquam autem tenetur molestiae quis reprehenderit facere corporis debitis a qui quidem? Quidem.</p>
+<!-- p>lorem4 => 4개의 단어만 입력 -->
+<p>Lorem ipsum dolor sit.</p>
