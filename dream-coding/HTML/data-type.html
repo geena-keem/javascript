@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Attributes</title>
+  <!-- https://developer.mozilla.org/ko/docs/Learn/HTML/Howto/Use_data_attributes 참고 -->
+  <style>
+    /* data-* */
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: teal;
+      margin-bottom: 50px;
+    }
+
+    /* div 태그에 있는 data-display-name="keem" */
+    div[data-display-name="keem"] {
+      background-color: thistle;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-index="1" data-display-name="keem">I'm div</div>
+  <div data-index="2" data-display-name="geena"></div>
+  <span data-index="1" data-display-name="keem">I'm span</span>
+  <script>
+    // div 태그를 가지고 있는 것들 중에 제일 첫 번째 
+    // const keem = document.querySelector('div');
+    const keem = document.querySelector('div[data-display-name="keem"]'); // 이렇게도 가능
+    console.log(keem.dataset);
+    // DOMStringMap에 정의한 것들이 들어가 있다.
+    // DOMStringMap { index: "1", displayName: "keem" }
+    // displayName: "keem"  => display-name이 camelCase로 표기된다.
+    // index: "1"
+    console.log(keem.dataset.displayName); // keem
+    console.log(keem.dataset.index); // 1
+
+    // => 사용자에게 민감한 데이터 즉, 보안에 조심해야 되는 정보들은 돔 요소에 추가하는 것은 좋지 않다.
+    //    암호화해서 javaScript안에 보관하는 것이 좋다.
+  </script>
+</body>
+
+</html>
